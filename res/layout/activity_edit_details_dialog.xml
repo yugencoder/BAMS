@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f9fe"
+    android:orientation="vertical" 
+    tools:context=".RegFingerprints_Dialog">
+
+    <include layout="@layout/actionbar_layout" />
+
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+     >
+
+    <Button
+        android:id="@+id/b_registerstudent"
+        style="@style/btnStyleShakespeare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/registerImage"
+        android:layout_marginBottom="27dp"
+        android:text="Register" />
+
+    <ImageView
+        android:id="@+id/registerImage"
+        android:layout_width="208dp"
+        android:layout_height="240dp"
+        android:layout_above="@+id/b_registerstudent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/studentRollno"
+        android:layout_x="13dp"
+        android:layout_y="61dp"
+         />
+
+    <EditText
+        android:id="@+id/studentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageScreen"
+        android:layout_alignTop="@+id/resultText"
+        android:ems="10"
+        android:hint="Enter your name" >
+
+        
+    </EditText>
+
+    <EditText
+        android:id="@+id/studentRollno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_below="@+id/studentName"
+        android:ems="10"
+        android:hint="Enter your roll no"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/doneText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/b_registerstudent"
+        android:layout_alignLeft="@+id/btndelete"
+        android:layout_alignParentRight="true"
+     
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/b_capture"
+        style="@style/btnStyleShakespeare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/b_registerstudent"
+        android:layout_alignBottom="@+id/b_registerstudent"
+        android:layout_alignLeft="@+id/registerImage"
+        android:text="Capture" />
+
+    <Button
+        android:id="@+id/btndelete"
+        style="@style/btnStyleShakespeare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/b_registerstudent"
+        android:layout_alignParentRight="true"
+        android:text="Delete" />
+
+    <TextView
+        android:id="@+id/note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/b_registerstudent"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:text="NOTE : Use Your Left Index" />
+
+</RelativeLayout>
+
+</LinearLayout>

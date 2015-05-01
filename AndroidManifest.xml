@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ultimate.bams"
+    android:versionCode="1"
+    android:versionName="1.0" >
+	 <uses-feature android:name="android.hardware.usb.host" />
+	 <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+	 <uses-permission android:name="android.permission.INTERNET" />
+	 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name="BAMSApplication">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SignUpActivity"
+            android:label="@string/title_activity_sign_up"
+            android:parentActivityName=".ribbit.LoginActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".Menu"
+            android:label="@string/menu">
+        </activity>
+        <activity
+            android:name=".Edit_Details_Activity" 
+            android:label="@string/edit_details">
+        </activity>
+        <activity
+            android:name=".Edit_Details_Dialog" 
+            android:label="@string/edit_details_dialog">
+	            <intent-filter>
+	                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+	            </intent-filter>
+	                  <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter" />
+        </activity>
+        <activity
+            android:name=".Take_Attendance" 
+            android:label="@string/take_attendance">
+        </activity>
+        <activity
+            android:name=".Take_Attendance_Dialog" 
+            android:label="@string/take_attendance_dialog">
+	            <intent-filter>
+	                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+	            </intent-filter>
+	                  <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter" />
+        </activity>
+        <activity
+            android:name=".Register_Student" 
+            android:label="@string/register_student">
+	            <intent-filter>
+	                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+	            </intent-filter>
+	                  <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter" />
+        </activity>
+        <activity
+            android:name=".SyncActivity" 
+            android:label="@string/sync_activity">
+        </activity>
+         <activity
+            android:name=".Pickdate"
+            android:label="@string/pick_date"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".PickDate2"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MainActivity_old"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+    </application>
+
+</manifest>

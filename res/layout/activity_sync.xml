@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+	<include layout="@layout/actionbar_layout" />
+	
+	<RelativeLayout 
+   
+    android:id="@+id/pager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity_old" >
+
+    <Button
+        android:id="@+id/Backup"
+        style="@style/btnStyleArsenic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Backup_attendance"
+        android:layout_alignRight="@+id/Backup_attendance"
+        android:layout_below="@+id/Backup_attendance"
+        android:text="Backup Class Data to Server" />
+
+    <Button
+        android:id="@+id/Restore"
+        style="@style/btnStyleSandrift"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Backup"
+        android:layout_alignRight="@+id/Backup"
+        android:layout_below="@+id/Backup"
+        android:text="Restore Class Data from Server" />
+
+    <Button
+        android:id="@+id/Restore_attendance"
+        style="@style/btnStyleArsenic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Restore"
+        android:layout_alignRight="@+id/Restore"
+        android:layout_below="@+id/Restore"
+        android:text="Restore Attendance Data from Server" />
+
+    <Button
+        android:id="@+id/Backup_attendance"
+        style="@style/btnStyleSandrift"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Backup Attendance Data to Server" />
+
+</RelativeLayout>
+</LinearLayout>
